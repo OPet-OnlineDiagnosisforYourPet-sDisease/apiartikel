@@ -13,4 +13,9 @@ router.get('/article/:title', (req, res) => {
     }
 });
 
+router.get('/article', (req, res) => {
+    const allArticles = handler.getAllArticles();
+    res.json(allArticles);
+});
+
 module.exports = router;
