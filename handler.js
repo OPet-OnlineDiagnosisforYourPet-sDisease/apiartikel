@@ -20,7 +20,7 @@ function getAllArticles() {
     return {
         success: true,
         message: "Data artikel berhasil diperoleh.",
-        artikel: articles.artikel
+        data: articles.artikel
     };
 }
 
