@@ -4,6 +4,11 @@ function getArticleByTitle(title) {
     return articles.artikel.find(article => article.judul === title);
 }
 
+function getAllArticles() {
+    return articles.artikel;
+}
+
 module.exports = {
-    getArticleByTitle
+    getArticleByTitle,
+    getAllArticles
 };
