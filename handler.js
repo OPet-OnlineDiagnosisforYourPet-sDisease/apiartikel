@@ -1,11 +1,27 @@
 const articles = require('./artikel.json');
 
 function getArticleByTitle(title) {
-    return articles.artikel.find(article => article.judul === title);
+    const article = articles.artikel.find(article => article.judul === title);
+    if (article) {
+        return {
+            success: true,
+            message: "Data artikel berhasil ditemukan.",
+            data: article
+        };
+    } else {
+        return {
+            success: false,
+            message: "Data artikel tidak ditemukan."
+        };
+    }
 }
 
 function getAllArticles() {
-    return articles.artikel;
+    return {
+        success: true,
+        message: "Data artikel berhasil diperoleh.",
+        data: articles.artikel
+    };
 }
 
 module.exports = {
